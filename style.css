@@ -1,0 +1,158 @@
+body {
+    margin: 0px;
+    padding: 30px 400px;
+    width: calc(100% - 800px);
+    height: calc(100vh - 60px);
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 7fr 7fr;
+	grid-template-areas:
+		"title title"
+		"area pie"
+		"bar bubble";
+}
+
+#title {
+    grid-area: title;
+}
+
+#title > p {
+    position: absolute;
+    background-color: #1b9e77;
+    font-size: 30px;
+    font-weight: 800;
+    color: white;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#area {
+    grid-area: area;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#rawArea {
+    position: absolute;
+    width: 450px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#selectedArea {
+    display: none;
+    position: absolute;
+    width: 450px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+#pie {
+    grid-area: pie;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#rawPie {
+    position: absolute;
+    width: 450px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#bar {
+    grid-area: bar;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#rawBar {
+    position: absolute;
+    width: 450px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#selectedBar {
+    display: none;
+    position: absolute;
+    width: 450px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+#bubble {
+    grid-area: bubble;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#rawBubble {
+    position: absolute;
+    width: 450px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#selectedBubble {
+    display: none;
+    position: absolute;
+    width: 450px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+path.slice {
+    stroke-width: 2px;
+}
+
+polyline {
+    opacity: .3;
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
+}
+
+#blind1 {
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    background-color: #1b9e77;
+    top: 0;
+    left: 0;
+}
+
+#blind2 {
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    background-color: #1b9e77;
+    top: 0;
+    right: 0;
+}
